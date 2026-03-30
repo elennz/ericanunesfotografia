@@ -366,3 +366,8 @@ body {
     background-color: #1a1a1a;
     color: #ffffff;
 }
+@media (max-width: 600px) {
+  h1 { 
+    font-size: 1.5rem; /* Isso diminui um pouco a letra apenas no celular */
+  }
+}
