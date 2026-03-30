@@ -1,0 +1,368 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+   
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-weight: 700; 
+}
+.sobre-mae {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mae.png');
+    
+    background-size: cover;       /* Faz a foto ocupar todo o espaço sem distorcer */
+    background-position: center;  /* Centraliza o rosto dela no meio da seção */
+    background-attachment: fixed; /* Opcional: faz a foto ficar parada enquanto o site rola */
+    
+    height: 100vh;                /* Faz a seção ter a altura total da tela do navegador */
+    display: flex;                /* Usa flexbox para centralizar o texto */
+    align-items: center;          /* Centraliza verticalmente */
+    justify-content: center;      /* Centraliza horizontalmente */
+    text-align: center;
+    color: white;                 /* Texto branco para contrastar com a foto */
+}
+
+.conteudo-sobre {
+    max-width: 800px;             /* Evita que o texto fique largo demais */
+    padding: 20px;
+}
+
+.conteudo-sobre h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.conteudo-sobre p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.conteudo-sobre h1 {
+    font-size: 1.2rem;       /* Menor e mais delicado */
+    text-transform: uppercase;
+    letter-spacing: 4px;     /* Espaçamento entre letras dá um ar de luxo */
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.conteudo-sobre h2 {
+    font-size: 3rem;         /* O texto principal deve ser grande */
+    line-height: 1.2;
+    margin-bottom: 25px;
+    max-width: 900px;        /* Limita a largura para não ficar uma linha infinita */
+}
+
+.conteudo-sobre p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    opacity: 0.8;            /* Deixa o texto secundário levemente mais suave */
+}
+.btn-contato {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #fff;  /* Borda branca fina */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-contato:hover {
+    background-color: #fff;  /* Inverte as cores no hover */
+    color: #000;
+}
+.galeria-grid {
+    display: grid;
+    /* Aqui dizemos: crie 3 colunas iguais */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; /* Espaço entre as fotos */
+    padding: 20px;
+    max-width: 1400px; /* Impede que as fotos fiquem gigantes em monitores ultra-wide */
+    margin: 0 auto;    /* Centraliza a galeria toda na tela */
+}
+
+.galeria-grid img {
+    width: 100%;       /* A foto ocupa toda a largura da coluna */
+    height: 500px;     /* Altura fixa para alinhar todas as fotos */
+    object-fit: cover; /* ESSENCIAL: corta a foto para caber no 500px sem esticar */
+    border-radius: 5px; /* Deixa as pontas levemente arredondadas */
+    transition: transform 0.3s ease;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.02); /* Um efeito sutil quando passa o mouse */
+}
+
+/* Para o site não quebrar no celular */
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: 1fr; /* No celular, volta a ser uma embaixo da outra */
+    }
+}
+/* No seu CSS */
+.portfolio h2, .portfolio p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio p {
+    max-width: 800px; /* Isso evita que o texto ocupe a tela toda */
+    margin-bottom: 50px; /* Dá espaço para a galeria começar */
+    line-height: 1.8;
+    color: #666;
+}
+.galeria-grid img {
+    /* Mantenha o que já tem e adicione: */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* A foto parece que "levanta" da tela */
+}
+.portfolio {
+    padding-top: 100px; /* Aumenta o espaço entre a foto da sua mãe e a galeria */
+    padding-bottom: 100px;
+}
+body {
+    background-color: #a59a7f; /* Esse tom de 'creme' tira a frieza do branco */
+    color: #333; /* Mantém o texto escuro para leitura */
+}
+
+/* Se você quiser que a galeria tenha um fundo diferente do resto: */
+.portfolio {
+    background-color: #a59a7f; 
+}
+.portfolio p {
+    font-size: 1.15rem;      /* Aumenta o tamanho para ser lido sem esforço */
+    color: #2c2c2c;          /* Um cinza quase preto para dar contraste máximo */
+    line-height: 1.8;        /* Espaçamento entre linhas para não embaralhar */
+    max-width: 850px;        /* Mantém o bloco de texto elegante */
+    margin: 0 auto 60px auto; /* Centraliza e dá espaço antes das fotos */
+    font-weight: 400;        /* Um peso médio ajuda na nitidez */
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;       /* Deixa o título "Portfólio" mais imponente */
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+.galeria-grid img {
+    /* Adicione ou atualize essa linha */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+.conteudo-sobre {
+    background: rgba(255, 255, 255, 0.1); /* Branco quase invisível */
+    backdrop-filter: blur(10px);        /* Efeito de vidro embaçado */
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* Botão Flutuante */
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-fixo img {
+    width: 35px;
+}
+
+.whatsapp-fixo:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+/* Estilo da Seção de Contato */
+.btn-whatsapp-grande {
+    display: inline-block;
+    padding: 20px 50px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-grande:hover {
+    background-color: #128c7e;
+    transform: translateY(-3px);
+}
+
+.trabalhos-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+    text-align: left;
+}
+#contato {
+    padding: 100px 10%; /* Dá um respiro grande nas laterais e no topo */
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+/* Limita a largura do texto longo para ficar fácil de ler */
+#contato .bio-texto {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: justify; /* Opcional: deixa as bordas do bloco retas */
+}
+
+/* Melhora as colunas de serviços */
+.trabalhos-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+.item-trabalho h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+.btn-whatsapp-grande {
+    display: inline-block;
+    background-color: #1a1a1a; /* Preto elegante */
+    color: #fff;
+    padding: 18px 45px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.btn-whatsapp-grande:hover {
+    background-color: #d4af37; /* Um dourado ou o tom do seu fundo */
+    transform: translateY(-3px);
+}
+.secao-sobre {
+    padding: 80px 10%;
+    background-color: #a39981; /* Mantendo seu tom elegante */
+}
+
+.container-flex {
+    display: flex;       /* Ativa o alinhamento lado a lado */
+    align-items: center; /* Centraliza a foto com o texto verticalmente */
+    gap: 50px;           /* Espaço entre a foto e o texto */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.coluna-foto {
+    flex: 1;             /* Foto ocupa uma parte do espaço */
+}
+
+.foto-pb {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    filter: grayscale(100%); /* Deixa a foto preta e branca */
+    box-shadow: 15px 15px 0px rgba(0,0,0,0.1); /* Detalhe artístico atrás da foto */
+}
+
+.coluna-texto {
+    flex: 1.5;           /* Texto ganha um pouco mais de espaço lateral */
+    text-align: left;    /* Alinhamento à esquerda é mais elegante para bio */
+}
+
+.coluna-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.bio {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.servicos-flex {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Ajuste para o site não quebrar no celular */
+@media (max-width: 900px) {
+    .container-flex {
+        flex-direction: column; /* No celular, foto fica em cima do texto */
+        text-align: center;
+    }
+    .coluna-texto {
+        text-align: center;
+    }
+    .servicos-flex {
+        flex-direction: column;
+    }
+}
+.rodape {
+    padding: 40px;
+    background-color: rgba(0,0,0,0.05); /* Um tom levemente mais escuro que o fundo */
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.6);
+}
+.container-instagram {
+    display: flex;          /* Transforma o container em flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    width: 100%;            /* Garante que o container ocupe a largura total */
+    padding: 20px 0 40px 0;        /* Dá espaço para as fotos e para o texto de baixo */
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+}
+
+.btn-instagram {
+    display: inline-block;
+    padding: 16px 40px;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+    text-align: center;      /* Garante o texto no meio do botão */
+}
+
+.btn-instagram:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
